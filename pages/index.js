@@ -1,11 +1,41 @@
 import Head from "next/head";
 import Image from "next/image";
-import { Inter } from "next/font/google";
-import styles from "@/styles/Home.module.css";
+import { Raleway } from "next/font/google";
+import Navigation from "@/containers/navigation/navigation";
+import Hero from "@/sections/hero/hero";
+import About from "@/sections/about/about";
+import Experience from "@/sections/experience/experience";
+import { useEffect } from "react";
 
-const inter = Inter({ subsets: ["latin"] });
+const raleway = Raleway({ subsets: ["latin"] });
 
 export default function Home() {
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollElements = document.querySelectorAll(".scroll");
+      scrollElements.forEach((element) => {
+        const elementTop = element.getBoundingClientRect().top;
+        const elementHeight = element.offsetHeight;
+        const windowHeight = window.innerHeight;
+
+        if (
+          elementTop <= windowHeight / 2 &&
+          elementTop + elementHeight >= windowHeight / 2
+        ) {
+          element.classList.remove("noshow");
+
+          element.classList.remove("scroll");
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
       <Head>
@@ -14,7 +44,12 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={`${styles.main} ${inter.className}`}></main>
+      <main className={`${raleway.className}`}>
+        <Navigation />
+        <Hero />
+        <About />
+        <Experience />
+      </main>
     </>
   );
 }
