@@ -2,7 +2,7 @@ const Footer = () => {
   return (
     <footer className="black">
       <div className="footer-container">
-        <img src="/logo/logo.svg" alt="" />
+        <img src="./logo/logo.svg" alt="" />
         <p>
           Travel the world, Live your best life, Make all the money you desire
           and <br />

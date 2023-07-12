@@ -17,7 +17,7 @@ const About = () => {
           <Button secondary>Learn More</Button>
         </div>
         <div className="scroll noshow image-overlay image-down">
-          <img src="/images/about1.png" alt="" />
+          <img src="./images/about1.png" alt="" />
         </div>
       </div>
     </section>

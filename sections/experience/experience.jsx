@@ -4,28 +4,28 @@ import { useEffect, useRef } from "react";
 
 const content = [
   {
-    image: "/images/exp1.jpg",
+    image: "./images/exp1.jpg",
     title: "Account Audit & Market Research",
     desc: "Our expert team will conduct a thorough account audit, examining your social media platforms, content quality, engagement metrics, and overall brand image. We'll identify areas of improvement and provide valuable insights to enhance your online presence.",
   },
   {
-    image: "/images/exp2.jpg",
+    image: "./images/exp2.jpg",
     title: "Content Creation Photography",
     desc: "Our team of expert coaches is available for daily and weekly one-on-one calls to provide you with the necessary help at any time. Whether you need a solution to a challenge you're facing, advice on achieving your goals, or simply motivation to progress, our coaches will be by your side.",
   },
   {
-    image: "/images/exp1.jpg",
+    image: "./images/exp1.jpg",
     title: "Account Audit & Market Research",
     desc: "Our expert team will conduct a thorough account audit, examining your social media platforms, content quality, engagement metrics, and overall brand image. We'll identify areas of improvement and provide valuable insights to enhance your online presence.",
   },
   {
-    image: "/images/exp1.jpg",
+    image: "./images/exp1.jpg",
     title: "Account Audit & Market Research",
     desc: "Our expert team will conduct a thorough account audit, examining your social media platforms, content quality, engagement metrics, and overall brand image. We'll identify areas of improvement and provide valuable insights to enhance your online presence.",
   },
 ];
 
-const Experience = () => {
+const zExperience = () => {
   const sliderRef = useRef(null);
 
   useEffect(() => {
