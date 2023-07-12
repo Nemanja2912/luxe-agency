@@ -5,7 +5,7 @@ const Navigation = () => {
   const [open, setOpen] = useState(false);
   return (
     <nav className="container fade-down">
-      <img src="/logo/logo.svg" alt="" />
+      <img src="./logo/logo.svg" alt="" />
 
       <div
         className="nav-icon"
