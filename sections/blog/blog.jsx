@@ -4,20 +4,20 @@ import { useEffect, useRef } from "react";
 
 const content = [
   {
-    image: "./images/blog1.jpg",
+    image: "images/blog1.jpg",
     title: "Exploring Freedom with OnlyFans & PG Rated Content",
   },
   {
-    image: "./images/blog2.jpg",
+    image: "images/blog2.jpg",
     title:
       "Why you NEED an agency to help you hit the top 1% of Only Fans Models",
   },
   {
-    image: "./images/blog3.jpg",
+    image: "images/blog3.jpg",
     title: "The beginners guide to using Tik Tok for Only Fans promotion",
   },
   {
-    image: "./images/blog4.png",
+    image: "images/blog4.png",
     title:
       "Earning Potential: 5 Reasons Non-Professional Women Can Make Six Figures a Year on OnlyFans",
   },

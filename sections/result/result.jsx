@@ -3,14 +3,14 @@ import MoveText from "@/components/moveText/moveText";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 const images = [
-  "./images/r1.png",
-  "./images/r2.png",
-  "./images/r3.png",
-  "./images/r4.png",
-  "./images/r5.png",
-  "./images/r6.png",
-  "./images/r7.png",
-  "./images/r8.png",
+  "images/r1.png",
+  "images/r2.png",
+  "images/r3.png",
+  "images/r4.png",
+  "images/r5.png",
+  "images/r6.png",
+  "images/r7.png",
+  "images/r8.png",
 ];
 
 const Result = () => {
