@@ -10,6 +10,7 @@ import Why from "@/sections/why/why";
 import Blog from "@/sections/blog/blog";
 import Faq from "@/sections/faq/faq";
 import Result from "@/sections/result/result";
+import Footer from "@/sections/footer/footer";
 
 const raleway = Raleway({ subsets: ["latin"] });
 
@@ -50,13 +51,23 @@ export default function Home() {
       </Head>
       <main className={`${raleway.className}`}>
         <Navigation />
-        <Hero />
+        <Hero
+          text="Make 6 Figures A Year From Monetizing Your Social Media, Allowing You
+          To Travel The World & Live Your Best Life."
+          image={"images/main-hero.jpg"}
+        />
         <About />
         <Experience />
         <Why />
         <Blog />
         <Faq />
         <Result />
+        <Hero
+          text="Get started with your modelling career and capitalise on the goldmine that is Only Fans. Click the button below and allow us to help you monetize your audience."
+          heading={2}
+          image={"images/image.jpg"}
+        />
+        <Footer />
       </main>
     </>
   );

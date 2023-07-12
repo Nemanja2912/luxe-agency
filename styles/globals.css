@@ -101,6 +101,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   color: white;
+  z-index: 10;
 }
 
 nav img {
@@ -123,8 +124,47 @@ ul li p:hover {
   opacity: 0.8;
 }
 
+.nav-icon {
+  display: none;
+}
+
+@media (max-width: 650px) {
+  nav {
+    top: 0;
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+    background-color: black;
+    position: fixed;
+  }
+  nav img {
+    position: relative;
+    z-index: 101;
+  }
+  .nav-icon {
+    z-index: 101;
+    display: initial;
+    cursor: pointer;
+    transition: 0.5s;
+    position: relative;
+  }
+
+  nav ul {
+    position: absolute;
+    background-color: black;
+    left: 0;
+    top: -2.5rem;
+    right: 0;
+
+    flex-direction: column;
+
+    padding: 10rem 0 5rem 0;
+    z-index: 9;
+
+    transition: 0.5s;
+  }
+}
+
 .hero {
-  background-image: url(../public/images/main-hero.jpg);
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -158,6 +198,11 @@ ul li p:hover {
 
 h1 {
   font-size: 6rem;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 4rem;
   font-weight: 500;
 }
 
@@ -430,5 +475,80 @@ h3 {
 
   to {
     transform: translateX(-51%);
+  }
+}
+
+.footer-container {
+  padding-top: 10rem;
+  max-width: 100rem;
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-container img {
+  width: 40rem;
+  margin-bottom: 3rem;
+}
+
+.footer-container p {
+  text-align: center;
+  opacity: 0.6;
+  margin-bottom: 5rem;
+}
+
+.footer-container ul {
+  margin-bottom: 5rem;
+}
+
+.footer-container .social {
+  display: flex;
+  gap: 5rem;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10rem;
+  align-items: flex-end;
+  padding-bottom: 5rem;
+}
+
+footer .container p,
+footer b {
+  font-size: 1.2rem !important;
+}
+
+footer .address {
+  text-align: center;
+}
+
+@media (max-width: 650px) {
+  .footer-container {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  footer br {
+    display: none;
+  }
+
+  footer ul,
+  footer .container {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  footer .container p,
+  footer b {
+    font-size: 1.4rem !important;
+  }
+
+  footer .address {
+    margin-top: 2rem;
   }
 }
