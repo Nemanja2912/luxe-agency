@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section className="hero">
       <div className="container flex-center fade-up">
-        <Heading1 style={{ maxWidth: "75%" }}>
+        <Heading1 style={{ maxWidth: "750px" }}>
           Make 6 Figures A Year From Monetizing Your Social Media, Allowing You
           To Travel The World & Live Your Best Life.
         </Heading1>

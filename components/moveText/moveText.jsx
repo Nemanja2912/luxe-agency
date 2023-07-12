@@ -1,9 +1,11 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 const MoveText = ({ text, active }) => {
+  const textRef = useRef(null);
+
   useEffect(() => {
     const handleScroll = () => {
-      const moveElement = document.querySelector(".move-text");
+      const moveElement = textRef.current;
       const elementRect = moveElement.getBoundingClientRect();
       const elementTop = elementRect.top;
       const windowHeight = window.innerHeight;
@@ -21,7 +23,13 @@ const MoveText = ({ text, active }) => {
   }, []);
   return (
     <div className="move-text-wrapper">
-      <div className="move-text">
+      <div className="move-text" ref={textRef}>
+        {text.map((word, index) => (
+          <p className={index === active ? "active-move" : ""}>{word}</p>
+        ))}
+        {text.map((word, index) => (
+          <p className={index === active ? "active-move" : ""}>{word}</p>
+        ))}
         {text.map((word, index) => (
           <p className={index === active ? "active-move" : ""}>{word}</p>
         ))}

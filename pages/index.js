@@ -6,6 +6,10 @@ import Hero from "@/sections/hero/hero";
 import About from "@/sections/about/about";
 import Experience from "@/sections/experience/experience";
 import { useEffect } from "react";
+import Why from "@/sections/why/why";
+import Blog from "@/sections/blog/blog";
+import Faq from "@/sections/faq/faq";
+import Result from "@/sections/result/result";
 
 const raleway = Raleway({ subsets: ["latin"] });
 
@@ -49,6 +53,10 @@ export default function Home() {
         <Hero />
         <About />
         <Experience />
+        <Why />
+        <Blog />
+        <Faq />
+        <Result />
       </main>
     </>
   );

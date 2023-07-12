@@ -4,8 +4,13 @@
   animation-name: fadeDown;
   animation-duration: 1s;
   animation-fill-mode: forwards;
-  animation-delay: 1s;
+  animation-delay: 0.5s;
   transform: translateY(-100px);
+}
+
+.noshow.fade-up {
+  opacity: 0;
+  transform: translateY(50px);
 }
 
 .fade-up:not(.noshow) {
@@ -17,7 +22,7 @@
 }
 
 .hero .fade-up {
-  animation-delay: 1.5s;
+  animation-delay: 1s;
 }
 
 .image-down:not(.noshow) {
@@ -72,11 +77,11 @@ p {
 
 @media (max-width: 650px) {
   html {
-    font-size: 1vw;
+    font-size: 8px;
   }
 
   * {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 }
 
@@ -167,6 +172,10 @@ h1 {
   .about-section {
     background-image: none;
   }
+
+  h1 {
+    font-size: 4.5rem;
+  }
 }
 
 .about {
@@ -235,6 +244,191 @@ h1 {
   -webkit-text-stroke: 1px white;
 }
 
+.move-text .active-move {
+  color: black;
+}
+
 .black .move-text .active-move {
   color: white;
+}
+
+.slider-overlay {
+  overflow: scroll;
+  margin-top: 7.5rem;
+  cursor: grab;
+}
+
+.slider-overlay::-webkit-scrollbar {
+  display: none;
+}
+
+h3 {
+  font-size: 2.6rem;
+  margin-bottom: 2rem;
+}
+
+.slider {
+  padding: 0 10rem;
+  width: max-content;
+  display: flex;
+  gap: 4rem;
+}
+
+@media (max-width: 650px) {
+  .slider {
+    padding: 0 5rem;
+  }
+}
+
+.experience-card {
+  width: 38vw;
+}
+
+.experience-card img,
+.blog-card img {
+  width: 100%;
+  height: 35rem;
+  object-fit: cover;
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 650px) {
+  .experience-card {
+    width: 70vw;
+  }
+}
+
+.why {
+  color: white;
+  background-image: url(../public/images/why.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 7.5rem 0 15rem 0;
+}
+
+.why-list {
+  margin: 3rem 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.why-item {
+  display: flex;
+  align-items: center;
+}
+
+.why-dot {
+  height: 0.7rem;
+  width: 0.7rem;
+  border-radius: 50%;
+  background-color: white;
+  margin-right: 2rem;
+}
+
+.blog {
+  padding: 7.5rem 0 15rem 0;
+}
+
+.blog-card {
+  width: 35rem;
+}
+
+.blog-card h3 {
+  color: #fe1122;
+}
+
+.red {
+  background-color: #fe1122;
+  color: white;
+}
+
+.faq {
+  padding: 10rem 0;
+}
+
+.faq-wrapper {
+  margin-top: 7.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.faq-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 2rem;
+  cursor: pointer;
+}
+
+.question {
+  font-size: 3rem;
+}
+
+.visible {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 5rem;
+  align-items: center;
+}
+
+.visible svg {
+  width: 3rem;
+}
+
+.icon-wrapper {
+  transition: 0.5s;
+}
+
+.answer {
+  overflow: hidden;
+  transition: 0.5s ease;
+  margin-top: 2rem;
+  opacity: 0.5;
+}
+
+.result {
+  padding: 10rem 0;
+}
+
+.result p {
+  max-width: 55rem;
+  text-align: center;
+  margin: auto;
+  margin-top: 2.5rem;
+}
+
+.move-overlay {
+  overflow: hidden;
+  display: flex;
+}
+
+.move-image {
+  display: flex;
+  gap: 4rem;
+  margin: 5rem;
+
+  animation-name: moveImage;
+  animation-duration: 150s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.move-image img {
+  width: auto;
+  height: 40rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+}
+
+@keyframes moveImage {
+  from {
+    transform: translateX(0px);
+  }
+
+  to {
+    transform: translateX(-51%);
+  }
 }
