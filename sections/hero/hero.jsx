@@ -9,6 +9,7 @@ const Hero = ({ text, heading = 1, image }) => {
         className={`container flex-center fade-up ${
           heading !== 1 ? "scroll noshow" : ""
         }`}
+        style={{ animationDelay: heading === 1 ? "1s" : "0s" }}
       >
         {heading === 1 ? (
           <Heading1 style={{ maxWidth: "750px" }}>{text}</Heading1>
