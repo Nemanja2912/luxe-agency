@@ -1,6 +1,10 @@
+import { Raleway } from "next/font/google";
+
+const raleway = Raleway({ subsets: ["latin"] });
+
 const Footer = () => {
   return (
-    <footer className="black">
+    <footer className={`${raleway.className} black`}>
       <div className="footer-container">
         <img src="./logo/logo.svg" alt="" />
         <p>

@@ -1,11 +1,56 @@
 import Button from "@/components/button/button";
-import { useState } from "react";
+import Link from "next/link";
+import { useEffect, useState } from "react";
+
+import { Raleway } from "next/font/google";
+import { useRouter } from "next/router";
+
+const raleway = Raleway({ subsets: ["latin"] });
 
 const Navigation = () => {
   const [open, setOpen] = useState(false);
+  const [darkTheme, setDarkTheme] = useState(false);
+
+  const router = useRouter();
+
+  useEffect(() => {
+    const checkRoute = () => {
+      if (
+        router.pathname === "/about" ||
+        router.pathname === "/blogs" ||
+        router.pathname === "/blog"
+      ) {
+        setDarkTheme(true);
+      } else {
+        setDarkTheme(false);
+      }
+    };
+
+    checkRoute();
+
+    const resize = () => {
+      if (window.innerWidth < 650) {
+        setDarkTheme(false);
+      } else {
+        checkRoute();
+      }
+    };
+
+    window.addEventListener("resize", resize);
+
+    return () => {
+      window.removeEventListener("resize", resize);
+    };
+  }, [router.pathname]);
+
   return (
-    <nav className="container fade-down">
-      <img src="./logo/logo.svg" alt="" />
+    <nav className={`${raleway.className} container fade-down`}>
+      <Link href="/">
+        <img
+          src={darkTheme ? "./logo/logoWhite.svg" : "./logo/logo.svg"}
+          alt=""
+        />
+      </Link>
 
       <div
         className="nav-icon"
@@ -26,18 +71,29 @@ const Navigation = () => {
         </svg>
       </div>
 
-      <ul style={{ top: open ? "-2.5rem" : "-50rem" }}>
+      <ul
+        style={{
+          top: open ? "-2.5rem" : "-50rem",
+          color: darkTheme ? "black" : "",
+        }}
+      >
         <li>
-          <p>About us</p>
+          <p>
+            <Link href="/about">About us</Link>
+          </p>
         </li>
         <li>
-          <p>Refer</p>
+          <p>
+            <Link href="/refer">Refer</Link>
+          </p>
         </li>
         <li>
-          <p>Blogs</p>
+          <p>
+            <Link href="/blogs">Blogs</Link>
+          </p>
         </li>
         <li>
-          <Button>Apply Now</Button>
+          <Button secondary={darkTheme}>Apply Now</Button>
         </li>
       </ul>
     </nav>
