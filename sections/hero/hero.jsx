@@ -2,7 +2,7 @@ import Button from "@/components/button/button";
 import Heading1 from "@/components/headings/heading1";
 import Heading2 from "../../components/headings/heading2";
 
-const Hero = ({ text, heading = 1, image, author }) => {
+const Hero = ({ text, heading = 1, image, author, noquote = false }) => {
   return (
     <section className="hero" style={{ backgroundImage: `url(${image})` }}>
       <div
@@ -11,7 +11,7 @@ const Hero = ({ text, heading = 1, image, author }) => {
         }`}
         style={{ animationDelay: heading === 1 ? "1s" : "0s" }}
       >
-        {author && (
+        {author && !noquote && (
           <svg
             width="76"
             height="55"
@@ -30,7 +30,7 @@ const Hero = ({ text, heading = 1, image, author }) => {
         ) : (
           <Heading2 style={{ maxWidth: "825px" }}>{text}</Heading2>
         )}
-        {author && <p>{author}</p>}
+        {author && <p style={{ maxWidth: "50rem" }}>{author}</p>}
         <Button>Apply Now</Button>
       </div>
     </section>

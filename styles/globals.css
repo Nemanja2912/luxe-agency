@@ -778,3 +778,115 @@ footer .address {
   margin: 3rem 0;
   opacity: 0.8;
 }
+
+.blogs {
+  padding-top: 20rem;
+}
+
+.blogs-desc {
+  max-width: 40rem;
+}
+
+.blog-cards {
+  margin-top: 20rem;
+  margin-bottom: 20rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 5rem;
+}
+
+@media (max-width: 650px) {
+  .blog-cards {
+    grid-template-columns: 1fr;
+    row-gap: 3rem;
+  }
+
+  .blog-cards .blog-card {
+    width: 100% !important;
+  }
+}
+
+.apply {
+  background-color: black;
+  color: white;
+}
+
+.apply-hero {
+  background-image: url(../public/images/apply.jpg);
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.apply-content {
+  max-width: 90rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.apply-content p {
+  max-width: 50rem;
+  margin-top: 2.5rem;
+}
+
+iframe {
+  width: 100%;
+  height: auto;
+}
+
+.video-wrapper {
+  max-width: 95rem;
+  margin: auto;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: -10rem;
+}
+
+.telegram-btn {
+  display: flex;
+  margin: auto;
+  width: max-content;
+  gap: 1rem;
+  margin-top: 15rem;
+  align-items: center;
+  border-radius: 5px;
+  padding: 15px 30px;
+  border: 1px solid #fff;
+}
+
+.telegram-btn .icon {
+  background-color: #2aabee;
+  height: 4rem;
+  width: 4rem;
+  padding-right: 2.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.icon {
+  animation: pulse 2s infinite linear;
+}
