@@ -6,20 +6,24 @@ const content = [
   {
     image: "images/blog1.jpg",
     title: "Exploring Freedom with OnlyFans & PG Rated Content",
-  },
-  {
-    image: "images/blog2.jpg",
-    title:
-      "Why you NEED an agency to help you hit the top 1% of Only Fans Models",
-  },
-  {
-    image: "images/blog3.jpg",
-    title: "The beginners guide to using Tik Tok for Only Fans promotion",
+    link: "/exploring-freedom",
   },
   {
     image: "images/blog4.png",
     title:
-      "Earning Potential: 5 Reasons Non-Professional Women Can Make Six Figures a Year on OnlyFans",
+      "7 Compelling reasons why starting an only fans business empowers women ",
+    link: "/7-compelling-reason",
+  },
+  {
+    image: "images/blogPost3.jpg",
+    title: "5 Ways to Overcome Hesitations and Start Your OnlyFans Business",
+    link: "/conquering-the-fear",
+  },
+  {
+    image: "images/blogPost4.jpg",
+    title:
+      "5 Reasons Non-Professional Women Can Make Six Figures a Year on OnlyFans",
+    link: "/unlocking-earning-potential",
   },
 ];
 
@@ -68,7 +72,7 @@ const Blog = () => {
       <div className="slider-overlay scroll noshow fade-up" ref={sliderRef}>
         <div className="slider">
           {content.map((item) => (
-            <BlogCard title={item.title} image={item.image} />
+            <BlogCard title={item.title} image={item.image} link={item.link} />
           ))}
         </div>
       </div>

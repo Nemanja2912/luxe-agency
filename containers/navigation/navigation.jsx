@@ -16,13 +16,13 @@ const Navigation = () => {
   useEffect(() => {
     const checkRoute = () => {
       if (
-        router.pathname === "/about" ||
-        router.pathname === "/blogs" ||
-        router.pathname === "/blog"
+        router.pathname === "/" ||
+        router.pathname === "/apply" ||
+        router.pathname === "/refer"
       ) {
-        setDarkTheme(true);
-      } else {
         setDarkTheme(false);
+      } else {
+        setDarkTheme(true);
       }
     };
 

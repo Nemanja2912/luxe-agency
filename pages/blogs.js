@@ -7,30 +7,36 @@ const blogList = [
     title:
       "7 Compelling reasons why starting an only fans business empowers women ",
     image: "images/blog4.png",
+    link: "/7-compelling-reason",
   },
   {
     title:
       "Why Starting an OnlyFans Business Outshines Getting Into Dropshipping",
     image: "images/blogPost2.jpg",
+    link: "/starting-of",
   },
   {
     title:
       "Conquering the Fear: 5 Ways to Overcome Hesitations and Start Your OnlyFans Business",
     image: "images/blogPost3.jpg",
+    link: "/conquering-the-fear",
   },
   {
     title:
       "Earning Potential: 5 Reasons Non-Professional Women Can Make Six Figures a Year on OnlyFans",
     image: "images/blogPost4.jpg",
+    link: "/unlocking-earning-potential",
   },
   {
     title:
       "Seizing the Opportunity: 5 Reasons Why Now is the Perfect Time to Become an OnlyFans Creator and Capitalize on the Market",
     image: "images/blogPost5.jpg",
+    link: "/seizing-the-opportunity",
   },
   {
     title: "Exploring Freedom with OnlyFans & PG Rated Content",
     image: "images/blogPost6.jpg",
+    link: "/exploring-freedom",
   },
 ];
 
@@ -48,7 +54,11 @@ const Blogs = () => {
 
         <div className="blog-cards">
           {blogList.map((item) => (
-            <BlogCard title={item.title} image={item.image}></BlogCard>
+            <BlogCard
+              title={item.title}
+              image={item.image}
+              link={item.link}
+            ></BlogCard>
           ))}
         </div>
       </div>

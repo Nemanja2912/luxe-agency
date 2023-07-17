@@ -59,6 +59,7 @@ export default function Home() {
             beauty get noticed in the world."
           button="Learn More"
           image="images/about1.png"
+          link="/about"
         />
         <Experience />
         <Why />

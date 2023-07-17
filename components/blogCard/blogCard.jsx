@@ -1,11 +1,14 @@
+import Link from "next/link";
 import Heading3 from "../headings/heading3";
 
-const BlogCard = ({ image, title }) => {
+const BlogCard = ({ image, title, link }) => {
   return (
-    <div className="blog-card">
-      <img src={image} alt="" />
-      <Heading3>{title}</Heading3>
-    </div>
+    <Link href={link}>
+      <div className="blog-card">
+        <img src={image} alt="" />
+        <Heading3>{title}</Heading3>
+      </div>
+    </Link>
   );
 };
 

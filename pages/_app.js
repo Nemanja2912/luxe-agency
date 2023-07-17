@@ -7,15 +7,16 @@ const raleway = Raleway({ subsets: ["latin"] });
 
 import Navigation from "@/containers/navigation/navigation";
 import Footer from "@/sections/footer/footer";
+import TelegramButton from "@/components/telegramButton/telegramButton";
 
 export default function App({ Component, pageProps }) {
   useEffect(() => {
     const handleScroll = () => {
-      const scrollElements = document.querySelectorAll(".scroll");
+      const scrollElements = document?.querySelectorAll(".scroll");
       scrollElements.forEach((element) => {
-        const elementTop = element.getBoundingClientRect().top;
-        const elementHeight = element.offsetHeight;
-        const windowHeight = window.innerHeight;
+        const elementTop = element?.getBoundingClientRect().top;
+        const elementHeight = element?.offsetHeight;
+        const windowHeight = window?.innerHeight;
 
         if (
           elementTop <= windowHeight / 2 &&
@@ -39,7 +40,7 @@ export default function App({ Component, pageProps }) {
     <main className={raleway.className}>
       <Navigation />
       <Component {...pageProps} />
-
+      <TelegramButton />
       <Footer />
     </main>
   );

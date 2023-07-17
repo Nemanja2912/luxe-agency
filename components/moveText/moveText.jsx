@@ -6,8 +6,11 @@ const MoveText = ({ text, active }) => {
   useEffect(() => {
     const handleScroll = () => {
       const moveElement = textRef.current;
-      const elementRect = moveElement.getBoundingClientRect();
-      const elementTop = elementRect.top;
+      const elementRect = moveElement?.getBoundingClientRect();
+      if (!elementRect) return;
+
+      const elementTop = elementRect?.top;
+
       const windowHeight = window.innerHeight;
 
       moveElement.style.transform = `translateX(${

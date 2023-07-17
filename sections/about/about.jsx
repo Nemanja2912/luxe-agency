@@ -1,7 +1,7 @@
 import Button from "@/components/button/button";
 import Heading1 from "@/components/headings/heading1";
 
-const About = ({ title, description, button, image }) => {
+const About = ({ title, description, button, image, link = undefined }) => {
   return (
     <section className="about-section">
       <div className="container about">
@@ -9,7 +9,9 @@ const About = ({ title, description, button, image }) => {
           <Heading1>{title}</Heading1>
           <p>{description}</p>
 
-          <Button secondary>{button}</Button>
+          <Button secondary link={link}>
+            {button}
+          </Button>
         </div>
         <div className="scroll noshow image-overlay image-down">
           <img src={image} alt="" />
