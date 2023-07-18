@@ -46,7 +46,7 @@ const Navigation = () => {
 
   return (
     <nav className={`${raleway.className} container fade-down`}>
-      <Link href="/">
+      <Link href="https://nemanja2912.github.io/luxe-agency/">
         <img
           src={darkTheme ? "./logo/logoWhite.svg" : "./logo/logo.svg"}
           alt=""
