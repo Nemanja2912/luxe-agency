@@ -11,13 +11,13 @@ const content = [
     title: "Next Level Support",
     description:
       "At Luxe Agency, we provide 24/7 messaging support through Slack for prompt assistance. Additionally, we conduct weekly growth/coaching calls to enhance your social media performance and offer valuable insights. With our comprehensive support, we aim to optimize your brand's online presence and help you succeed in the competitive social media landscape.",
-    image: "./images/service2.jpg",
+    image: "./images/service2.png",
   },
   {
     title: "Brand & Growth Management ",
     description:
       "At Luxe Agency, we offer comprehensive social media account management across platforms like Instagram, OnlyFans (OF), TikTok, Twitter, Facebook, and more. Our dedicated team provides 24/7 live engagement services, generating real followers and likes for your content. We also closely monitor your accounts and industry trends, ensuring your brand is constantly growing and staying ahead of competitors. ",
-    image: "./images/service3.jpg",
+    image: "./images/service3.png",
   },
   {
     title: "Content Creation",

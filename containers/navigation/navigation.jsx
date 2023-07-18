@@ -18,7 +18,8 @@ const Navigation = () => {
       if (
         router.pathname === "/" ||
         router.pathname === "/apply" ||
-        router.pathname === "/refer"
+        router.pathname === "/refer" ||
+        router.pathname === "/legal"
       ) {
         setDarkTheme(false);
       } else {
