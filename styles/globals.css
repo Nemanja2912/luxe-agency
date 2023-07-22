@@ -674,6 +674,7 @@ footer .address {
 
 .refer-form input {
   width: 100%;
+  margin-bottom: 1.5rem;
   border-radius: 5px;
   border: 1px solid rgba(43, 45, 66, 0.1);
   background: rgba(43, 45, 66, 0.04);
@@ -685,9 +686,13 @@ footer .address {
   background: rgba(43, 45, 66, 1);
   display: flex;
   padding: 15px 30px;
+  outline: 0px;
+  border: 0px;
+  font-weight: 400;
   justify-content: center;
   align-items: center;
   gap: 10px;
+  width: 100%;
   color: white;
   cursor: pointer;
 }
