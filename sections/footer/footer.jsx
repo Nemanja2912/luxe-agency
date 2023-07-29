@@ -16,9 +16,7 @@ const Footer = () => {
 
         <ul>
           <li>
-            <Link href={"https://nemanja2912.github.io/luxe-agency/"}>
-              Home
-            </Link>
+            <Link href={"/"}>Home</Link>
           </li>
           <li>
             <Link href={"/about"}>About Us</Link>

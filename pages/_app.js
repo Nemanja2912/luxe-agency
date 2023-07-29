@@ -70,6 +70,30 @@ export default function App({ Component, pageProps }) {
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff"></meta>
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.luxeagencyco.com/" />
+        <meta
+          property="og:title"
+          content="All Inclusive Only Fans Management Agency | Luxe Agency Co®"
+        />
+        <meta
+          property="og:description"
+          content="We help new and established creators make 100k+ a year from monetizing their social media, so that they can travel, have FUN, and live their best life."
+        />
+        <meta property="og:image" content="/images/cover.png" />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://www.luxeagencyco.com/" />
+        <meta
+          property="twitter:title"
+          content="All Inclusive Only Fans Management Agency | Luxe Agency Co®"
+        />
+        <meta
+          property="twitter:description"
+          content="We help new and established creators make 100k+ a year from monetizing their social media, so that they can travel, have FUN, and live their best life."
+        />
+        <meta property="twitter:image" content="/images/cover.png" />
       </Head>
       <Navigation />
       <Component {...pageProps} />
